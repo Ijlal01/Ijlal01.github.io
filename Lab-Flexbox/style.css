@@ -1,0 +1,82 @@
+.header {
+  background-color: lightblue;
+  text-align: center;
+  padding: 8px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  background-color: #304d45;
+}
+
+li {
+  float: left;
+  border-right: 4px solid black;
+  padding: 10px;
+  color: white;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  margin-bottom: 0;
+}
+
+.main div {
+  border: 1px solid black;
+  flex: 1;
+  height: 400px;
+  background-color: grey;
+  text-align: left;
+}
+
+.main div:nth-child(2) {
+  border: 1px solid black;
+  flex: 2;
+  background-color: rgba(156, 147, 147, 0.726);
+  text-align: left;
+}
+
+.main div:nth-child(3) {
+  background-color: rgba(156, 147, 147, 0.418);
+}
+
+.footer {
+  text-align: center;
+  background-color: #304d45;
+  color: white;
+  padding: 2px 0 2px 0;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media only screen and (max-width: 450px) {
+  .main {
+    /* flex: 100%; */
+    flex-basis: 30%;
+    flex-wrap: wrap;
+  }
+
+  .column1 {
+    flex: 1;
+    order: 1;
+  }
+  .column2 {
+    flex: 2;
+    order: 3;
+  }
+  .column3 {
+    flex: 1;
+    order: 2;
+  }
+}
